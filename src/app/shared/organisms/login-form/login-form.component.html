@@ -1,0 +1,30 @@
+<form class="space-y-6">
+  <app-molecule-form-field label="Email Address">
+    <app-atom-input
+      type="email"
+      placeholder="you@example.com"
+      [ngModel]="email"
+      (ngModelChange)="emailChange.emit($event)"
+      name="email"
+    ></app-atom-input>
+  </app-molecule-form-field>
+
+  <app-molecule-form-field label="Password">
+    <app-atom-input
+      type="password"
+      placeholder="••••••••"
+      [ngModel]="password"
+      (ngModelChange)="passwordChange.emit($event)"
+      name="password"
+    ></app-atom-input>
+  </app-molecule-form-field>
+
+  <div class="pt-2">
+    <app-atom-button
+      label="Sign in"
+      variant="primary"
+      type="submit"
+      (onClick)="onSubmit()"
+    ></app-atom-button>
+  </div>
+</form>
